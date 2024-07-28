@@ -1,0 +1,249 @@
+/* TodoApp.css */
+
+body {
+	font-family: "Arial", sans-serif;
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 0;
+}
+
+.todo-app {
+	padding: 2rem;
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 600px;
+	margin: 2rem auto;
+	min-height: 100vh;
+	position: relative;
+}
+
+.title {
+	text-align: center;
+	font-size: 2.5rem;
+	color: #333;
+	margin-bottom: 1.5rem;
+}
+
+.todo-form {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.input {
+	padding: 0.75rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: calc(100% - 8rem); /* Adjust width to leave space for buttons */
+	font-size: 1rem;
+	box-sizing: border-box;
+}
+
+.btn {
+	padding: 0.75rem 1.25rem;
+	border: none;
+	border-radius: 4px;
+	color: #ffffff;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.btn-add {
+	background-color: #007bff;
+}
+
+.btn-add:hover {
+	background-color: #0056b3;
+}
+
+.btn-save {
+	background-color: #28a745;
+}
+
+.btn-save:hover {
+	background-color: #218838;
+}
+
+.btn-cancel {
+	background-color: #6c757d;
+}
+
+.btn-cancel:hover {
+	background-color: #5a6268;
+}
+
+.btn-edit {
+	background-color: #ffc107;
+}
+
+.btn-edit:hover {
+	background-color: #e0a800;
+}
+
+.btn-delete {
+	background-color: #dc3545;
+}
+
+.btn-delete:hover {
+	background-color: #c82333;
+}
+
+.todo-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.todo-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	border-bottom: 1px solid #e0e0e0;
+	background-color: #fafafa;
+	border-radius: 4px;
+	margin-bottom: 0.5rem;
+}
+
+.todo-text {
+	flex: 1;
+	cursor: pointer;
+	overflow-wrap: break-word;
+	word-break: break-word;
+	color: #333;
+	font-size: 1rem;
+}
+
+.todo-status {
+	font-size: 0.875rem;
+	color: #555;
+	margin-left: 1rem;
+}
+
+.todo-actions {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.dropdown {
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 0.875rem;
+	cursor: pointer;
+}
+
+.completed {
+	text-decoration: line-through;
+}
+
+.notification {
+	padding: 1rem;
+	background-color: #007bff;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 1rem;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+	.todo-form {
+		flex-direction: row;
+	}
+
+	.input {
+		width: calc(100% - 8rem); /* Adjust width to leave space for buttons */
+	}
+
+	.btn {
+		min-width: 100px; /* Ensure buttons have a minimum width */
+	}
+
+	.todo-actions {
+		flex-direction: row;
+	}
+}
+
+/* Medium screens (tablets and small desktops) */
+@media (max-width: 1199px) and (min-width: 768px) {
+	.todo-form {
+		flex-direction: row;
+	}
+
+	.input {
+		width: calc(100% - 8rem); /* Adjust width to leave space for buttons */
+	}
+
+	.todo-actions {
+		flex-direction: row;
+	}
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 767px) {
+	.todo-form {
+		flex-direction: column;
+	}
+
+	.input {
+		width: 100%;
+	}
+
+	.btn {
+		width: 100%;
+		margin-top: 0.5rem;
+	}
+
+	.todo-actions {
+		flex-direction: row; /* Align actions and dropdown horizontally */
+		gap: 0.5rem;
+		align-items: center;
+		flex-wrap: nowrap; /* Prevent wrapping */
+	}
+
+	.dropdown {
+		margin-left: 0;
+		margin-top: 0;
+		width: auto; /* Allow width to adjust based on content */
+	}
+}
+
+/* Extra-small screens (350px and below) */
+@media (max-width: 350px) {
+	.todo-form {
+		flex-direction: column;
+	}
+
+	.input {
+		width: 100%;
+	}
+
+	.btn {
+		width: 100%;
+		padding: 0.5rem;
+	}
+
+	.todo-actions {
+		flex-direction: row; /* Align actions and dropdown horizontally */
+		gap: 0.5rem;
+		align-items: center;
+		flex-wrap: nowrap; /* Prevent wrapping */
+	}
+
+	.dropdown {
+		margin-left: 0;
+		margin-top: 0;
+		width: auto; /* Allow width to adjust based on content */
+	}
+}
